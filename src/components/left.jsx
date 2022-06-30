@@ -1,5 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const smoothAppear = keyframes`
+0% {
+  opacity: 0;
+  transform: translateY(10%)
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,6 +19,7 @@ const Wrapper = styled.div`
   justify-content: center;
   flex: 1 1 50%;
   margin-right: 30px;
+  animation: ${smoothAppear} 700ms ease-in;
 `;
 
 const Img = styled.img`
@@ -22,7 +34,7 @@ const Text = styled.div`
 const Left = () => {
   return (
     <Wrapper>
-      <Img src="/images/triple2x.png"></Img>
+      <Img src="/images/triple2x.png" />
       <Text>2021년 12월 기준</Text>
     </Wrapper>
   );
