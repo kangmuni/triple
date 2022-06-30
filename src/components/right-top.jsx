@@ -56,6 +56,7 @@ const Texts = styled.div`
 
 const Text = styled.div`
   font-size: 40px;
+  margin-top: 15px;
 `;
 
 const RightTop = () => {

@@ -55,8 +55,7 @@ const Section = styled.section`
   flex-direction: column;
   flex: 1 1 50%;
   margin-bottom: 70px;
-  margin-left: 30px;
-  padding: 50px;
+  margin-left: 70px;
   animation: ${smoothAppear} 700ms ease-in;
 `;
 

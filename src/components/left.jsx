@@ -54,7 +54,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1 1 50%;
-  margin-right: 30px;
+  margin-right: 70px;
   animation: ${smoothAppear} 700ms ease-in;
 `;
 
