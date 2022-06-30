@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const smoothAppear = keyframes`
@@ -60,11 +60,33 @@ const Text = styled.div`
 `;
 
 const RightTop = () => {
+  const [traveler, setTraveler] = useState(0);
+  const [review, setReview] = useState(100);
+  const [schedule, setSchedule] = useState(470);
+
+  const counter = (max) => {
+    let now = max;
+
+    const handle = setInterval(() => {
+      setTraveler(Math.ceil(max - now));
+      if (now < 0) {
+        clearInterval(handle);
+      }
+      const step = now / 10;
+      setTraveler((now -= step / 10));
+    }, 50);
+  };
+
+  useEffect(() => {
+    const max = 700;
+    setTimeout(() => counter(max), 2000);
+  });
+
   return (
     <Texts>
-      <Text> 700만 명의 여행자</Text>
-      <Text> 100만 개의 여행 리뷰</Text>
-      <Text>470만 개의 여행 일정</Text>
+      <Text> {traveler}만 명의 여행자</Text>
+      <Text> {review}만 개의 여행 리뷰</Text>
+      <Text>{schedule}만 개의 여행 일정</Text>
     </Texts>
   );
 };

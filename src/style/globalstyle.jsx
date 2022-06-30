@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -12,8 +12,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh;
         margin: 0;
         padding: 0;
-        font-family: "고딕", sans-serif;
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

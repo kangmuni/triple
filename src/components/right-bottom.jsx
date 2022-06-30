@@ -65,7 +65,7 @@ const Description = styled.div`
   padding-left: 10px;
   color: rgb(107, 106, 106);
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
 `;
 
 const Img = styled.img`
